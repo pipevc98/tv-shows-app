@@ -1,0 +1,22 @@
+
+<app-add></app-add>
+
+<div *ngFor="let item of tvShows"  class="row" >
+  <div class="col">
+    <div class="card mt-4" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{item.nombre}}</h5>
+          
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" [checked]="item.favorite == true" id="flexCheckChecked"  disabled >
+              <label class="form-check-label" for="flexCheckChecked">
+                Es de Tus Favoritas? 
+              </label>
+            </div>
+          
+          <button class="btn btn-primary" (click)="changeEnable()">Edit</button>
+          <button class="btn btn-danger" (click)="deleteTvshow(item.id)">Delete</button>
+        </div>
+    </div>
+  </div>
+</div>

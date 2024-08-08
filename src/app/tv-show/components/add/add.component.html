@@ -1,0 +1,16 @@
+<form  autocomplete="off" [formGroup]="tvShowForm" (ngSubmit)="postTvShows()">
+    <div class="row align-items-center gap-4">
+        <div class="col">
+            <input type="text" class="form-control" formControlName="nombre" id="name" placeholder="Nombre" >
+        </div>
+        <div class="form-check col">
+            <input class="form-check-input" type="checkbox" value="" formControlName="favorite" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Es de tus Favoritas?
+            </label>
+        </div>
+        <div class="col">
+            <button class="btn btn-primary w-100">Agregar</button>
+        </div>
+    </div>
+</form>
